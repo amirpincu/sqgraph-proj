@@ -1,0 +1,108 @@
+[
+    {
+        "id": 870577548,
+        "name": "Edison Mccabe",
+        "adress": "AAA st. 123",
+        "balance": 63985,
+        "branch_id": 5
+    },
+    {
+        "id": 142607331,
+        "name": "Chandler Benjamin",
+        "adress": "BBB st. 123",
+        "balance": 91379,
+        "branch_id": 3
+    },
+    {
+        "id": 178579833,
+        "name": "Shayne Mcgill",
+        "adress": "CCC st. 123",
+        "balance": 29004,
+        "branch_id": 4
+
+    },
+    {
+        "id": 429556560,
+        "name": "Ashanti Griffin",
+        "adress": "CCC st. 123",
+        "balance": 54659,
+        "branch_id": 1
+    },
+    {
+        "id": 530591561,
+        "name": "Gurpreet Dupont",
+        "adress": "DDD st. 123",
+        "balance": 23445,
+        "branch_id": 5
+    },
+    {
+        "id": 752841718,
+        "name": "Maxime Bannister",
+        "adress": "EEE st. 123",
+        "balance": 80815,
+        "branch_id": 2
+    },
+    {
+        "id": 726431363,
+        "name": "Dilan Harmon",
+        "adress": "FFF st. 123",
+        "balance": 24757,
+        "branch_id": 2
+    },
+    {
+        "id": 548748962,
+        "name": "Corrie Hough",
+        "adress": "GGG st. 123",
+        "balance": 92159,
+        "branch_id": 1
+    },
+    {
+        "id": 940441205,
+        "name": "Whitney O'Connor",
+        "adress": "HHH st. 123",
+        "balance": 5011,
+        "branch_id": 2
+    },
+    {
+        "id": 838405318,
+        "name": "Emaan Rivas",
+        "adress": "III st. 123",
+        "balance": 56573,
+        "branch_id": 5
+    },
+    {
+        "id": 576869324,
+        "name": "Clay Simpson",
+        "adress": "JJJ st. 123",
+        "balance": 33376,
+        "branch_id": 1
+    },
+    {
+        "id": 370619205,
+        "name": "Mirza East",
+        "adress": "KKK st. 123",
+        "balance": 76691,
+        "branch_id": 3
+    },
+    {
+        "id": 684458809,
+        "name": "Kacy Vance",
+        "adress": "LLL st. 123",
+        "balance": 80300,
+        "branch_id": 2
+    },
+    {
+        "id": 252161278,
+        "name": "Teigan Povey",
+        "adress": "AAA st. 123",
+        "balance": 58764,
+        "branch_id": 1
+    },
+    {
+        "id": 885312726,
+        "name": "Claire Philip",
+        "adress": "MMM st. 123",
+        "balance": 77550,
+        "branch_id": 5
+    }
+]
