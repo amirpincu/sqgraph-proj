@@ -1,3 +1,41 @@
+type Branch {
+   id: ID!
+   adress: String
+   clients: [ Client ]
+}
+
+type Client {
+   id: ID!
+   name: String
+   adress: String
+   balance: Float
+   branch_id: Int
+   branch: Branch
+}
+
+type Transaction {
+   id: ID!
+   from_id: Int
+   to_id: Int
+   ammount: Float
+   time: String
+}
+
 type Query {
-   test: String
+   clients: [Client]
+   clientByID( id: Int ): Client
+   branches: [Branch]
+   branchByID( id: Int ): Branch
+}
+
+type Mutation {
+   createClient( data: NewClient ): String
+}
+
+input NewClient {
+   id: Int!,
+   name: String!,
+   adress: String!,
+   balance: Float!,
+   branch_id: Int!
 }
