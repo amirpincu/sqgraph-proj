@@ -21,13 +21,13 @@ const  {graphiqlExpress,graphqlExpress} = require('apollo-server-express')
 app.use('/graphql',graphqlExpress({schema}))
 app.use('/graphiql',graphiqlExpress({endpointURL:'/graphql'}))
 
-app.listen(
-   port, () => console.info(
-      `Server started on port ${port}`
-   )
-);
+// app.listen(
+//    port, () => console.info(
+//       `Server started on port ${port}`
+//    )
+// );
 
-/*
+
 http.createServer(function (req, res) {
   // const currentUrl = new url.URL( req.url );
   const current_url = new URL(`http://websitename.com${req.url}`);
@@ -57,8 +57,60 @@ http.createServer(function (req, res) {
           }
         });
       }
+      else {
+        retData = "The given parameters don't match any built in query for 'clients'";
+      }
 
       break;
+    case '/client':
+
+      if ( parametersCount == 5 &&
+        parameters.has("id") &&
+        parameters.has("name") &&
+        parameters.has("adress") &&
+        parameters.has("balance") &&
+        parameters.has("branch-id")
+        ) {
+
+          const clients = db.clients.list();
+          const branches = db.branches.list();
+
+          if ( ( typeof id != "number" ) ) {
+              // return `${typeof id}`;
+              return `Given id must be a number.`;
+          }
+          clients.forEach((currClient) => {
+              if ( currClient.id == id ) {
+                  return `A client with the id ${id} already exists. please enter an unregistered id.`;
+              }
+          });
+
+          let branchExistFlag = false;
+          branches.forEach((currBranch) => {
+              if (currBranch.id == branch) {
+                  branchExistFlag = true;
+              }
+          });
+          if ( !branchExistFlag ) {
+              return `The branch id does not co-respond to an existing branch in the system.`;
+          }
+
+          db.clients.create({
+              id: id,
+              name: name,
+              adress: adress,
+              balance: balance,
+              branch_id: branch
+          });
+
+          retData "Client created succesfully";
+
+      }
+      else {
+        retData = "The parameters given dont match the ones needed for the creation of a new client ( id, name, adress, balance and a branch-id";
+      }
+
+
     default:
       retData = "The given request does not exist.";
   }
@@ -66,4 +118,4 @@ http.createServer(function (req, res) {
   res.end(JSON.stringify(retData));
  
  }).listen(port);
- */
+ 
