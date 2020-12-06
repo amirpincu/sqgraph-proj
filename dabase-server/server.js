@@ -28,7 +28,7 @@ app.use('/graphiql',graphiqlExpress({endpointURL:'/graphql'}))
 // );
 
 
-http.createServer(function (req, res) {
+http.createServer( function (req, res) {
   // const currentUrl = new url.URL( req.url );
   const current_url = new URL(`http://websitename.com${req.url}`);
   const parameters = current_url.searchParams;
@@ -103,7 +103,7 @@ http.createServer(function (req, res) {
               branch_id: branch
           });
 
-          retData "Client created succesfully";
+          retData = "Client created succesfully";
 
       }
       else {
